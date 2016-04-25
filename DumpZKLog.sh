@@ -1,13 +1,15 @@
 #!/bin/bash
 # Dumps latest ZK log file for CM/CDH-based Hadoop Distributions
+
 # Parcel-based install (Default)
-JARPATH1=/opt/cloudera/parcels/CDH/jars
-ZKPATH1=$JARPATH1
+JARPATH1=/opt/cloudera/parcels/CDH/lib/zookeeper/lib
 
 # Comment out the above and uncomment below for package-based installs
 # Package-based install
 #JARPATH1=/usr/lib/zookeeper/lib
-#ZKPATH1=$JARPATH1/..
+
+# Set ZK Path
+ZKPATH1=$JARPATH1/..
 
 # Set path to ZK working folder
 ZKLIB1=/var/lib/zookeeper/version-2
