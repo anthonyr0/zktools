@@ -1,6 +1,8 @@
 # zktools
 Collection of scripts used for troubleshooting ZooKeeper on a CM/CDH cluster
 
+## Compatible with CM 5.0+
+
 ## DumpZKLog.sh
 Dumps latest ZK log file for CM/CDH-based Hadoop Distributions
 ##### Usage: ./DumpZKLog.sh
