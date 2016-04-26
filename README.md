@@ -1,5 +1,6 @@
 # zktools
 Collection of scripts used for troubleshooting ZooKeeper on a CM/CDH cluster
+
 Compatible with CM 5.0+
 
 ## DumpZKLog.sh
