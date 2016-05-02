@@ -18,7 +18,7 @@ fi
 ZKPATH1=$JARPATH1/..
 
 # Set path to ZK working folder
-ZKLIB1=/var/lib/zookeeper/version-2
+ZKLIB1=$(grep dataDir $JARPATH1/../conf/zoo.cfg | cut -d '=' -f2)/version-2
 
 # Set path to required CDH jars
 CLPATH1=$(ls -f $ZKPATH1/zookeeper-*cdh*.jar $JARPATH1/log4j-*.jar $JARPATH1/slf4j-log4j*.jar $JARPATH1/slf4j-api-*.jar | tr '\n' ':')
