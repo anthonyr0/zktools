@@ -1,10 +1,16 @@
 #!/bin/bash
 # Dumps latest ZK log file for CM/CDH-based Hadoop Distributions
 
-# If path exists assume package install, otherwise assume parcel install
-if [ -d /usr/lib/zookeeper/ ]; then
+# Check for typical homes of ZK
+# TODO: Detect tarball install
+if [ -d /usr/local/zookeeper/ ]; then
+   # Non-CM package-based install
+   JARPATH1=/usr/local/zookeeper/lib
+elif [ -d /usr/lib/zookeeper/ ]; then
+   # CM Package-based install
    JARPATH1=/usr/lib/zookeeper/lib
 else
+   # CM Parcel install
    JARPATH1=/opt/cloudera/parcels/CDH/lib/zookeeper/lib
 fi
 
